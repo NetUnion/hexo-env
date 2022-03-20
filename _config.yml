@@ -102,4 +102,7 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:david4958606/david4958606.github.io.git
+  branch: master
+  message: [Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}]
