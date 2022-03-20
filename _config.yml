@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: NetUnion
-subtitle: 'NetUnion@UESTC Blog'
-description: '网络工程博客'
+title: David 自留地
+subtitle: '技术宅拯救世界'
+description: '编程技术随笔'
 keywords: [网络工程, 开源]
-author: NetUnion
+author: David Wang
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
