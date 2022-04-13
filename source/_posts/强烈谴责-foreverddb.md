@@ -4,6 +4,20 @@ date: 2022-04-13 03:27:41
 tags: 檄文
 ---
 
+## 最新进展
+
+经笔者调查发现，这个 foreverddb，最早fork的是 RisingEntropy 的 [FuckLegymApp](https://github.com/buzhibujuelb/FuckLegymApp)，后来 entropy 将仓库转为了私有（他当时仅是自己写了数条使用条款，并未采用 GPL 或其他协议），ddb 就在 GPLv3 协议下继续进行开发（当时的仓库可见 [buzhibujuelb/FuckLegym](https://github.com/buzhibujuelb/FuckLegym)，一段时间后，ddb 将开源代码删除，闭源了软件。这是违反GPLv3协议的，如有必要，我甚至可以跟据该协议起诉 ddb（案例：[OSCHINA](https://www.oschina.net/news/178100)）。
+
+注：上述两个 GitHub 仓库分别是 buzhibujuelb fork 的 entropy 的版本和 ddb 的初始版本，因为这两个的原仓库均被删库，所以没有 fork 的标识，但是可以从 commit 记录中看出。
+
+此外，ddb 的操作是删除了开源的 FuckLegym 仓库后又建了同名的仓库（本仓库）做发布页面，但因为闭源版本和此前的开源版本的代码实质上相同，所以仍然在GPL管辖范围内。
+
+在笔者向 ddb 申明上述情况后（详见 [Issue #26](https://github.com/Foreverddb/FuckLegym/issues/26)）ddb认识到了自己的错误，同意遵循 GPLv3 协议的有关内容，在两天内再次开源。
+
+此外，笔者为在此前的争论中对 ddb 造成的冒犯道歉。
+
+---
+
 近日，笔者发现，由我校某同学开发的 “FuckLegymApp” 程序在因学校压力将仓库转为私有后，[Foreverddb](https://github.com/Foreverddb) 在删库前 fork 了代码并接手了后续开发工作，并开发出了一系列新功能。起初，笔者很是赞赏这种积极推动开源项目发展的行为，但好景不长，该开发者在实质上将代码转为了私有，只保留了一个发布页面。对此，该开发者给出的解释是「出于一些考虑实行闭源」。笔者考虑到开发者可能是顾及该仓库的 “半地下” 性质，也并未对此作出过多批评。
 
 但是，就在几个小时前，笔者发现在该软件的最新版本中，该开发者加入了收费功能和邀请获得积分功能，无论是从该软件的性质上来讲还是从原作者的 [LICENCE](https://raw.githubusercontent.com/DarkUestc/FuckLegymApp/master/LICENSE?token=GHSAT0AAAAAABNQJTFIGJBYRFJZSOPYDAG4YSV24PQ) 上来讲，这都是及其不合理且严重违背开源社区的道德底线的行为！为此，笔者与该开发者联系，并发生了一些争论（详见 [GitHub Issue](https://github.com/Foreverddb/FuckLegym/issues/22)）。
