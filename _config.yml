@@ -106,3 +106,8 @@ deploy:
   repo: git@github.com:david4958606/david4958606.github.io.git
   branch: master
   message: [Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}]
+
+# google search
+sitemap:
+  path: sitemap.xml
+  url: https://blog.davidwang.org
