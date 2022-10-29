@@ -2,6 +2,7 @@
 title: 使用 QEMU 搭建 RISC-V 开发环境
 tags:
   - riscv
+  - PLCT
 description: 本文比较详细的描述了如何在 Archlinux 下安装 QEMU 并搭建 RISC-V 开发环境
 date: 2022-10-12 17:42:51
 ---

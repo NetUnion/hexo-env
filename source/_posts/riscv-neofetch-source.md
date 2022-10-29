@@ -2,6 +2,7 @@
 title: 为 Debian RISC-V 打包 neofetch
 tags:
   - riscv
+  - PLCT
 description: 本文以 neofetch 为例，介绍了 Debian RISC-V 的软件包打包流程
 date: 2022-10-12 20:21:20
 ---

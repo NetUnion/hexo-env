@@ -3,16 +3,56 @@ title: 搭建 Deepin RISCV QEMU 环境
 tags:
   - deepin
   - riscv
+  - PLCT
 description: 本文简述了如何构建 Deepin risc-v 的 qemu 镜像
 date: 2022-10-27 22:06:47
 ---
 
+## 10/29 更新
+
+被组长告知之前直接使用的 `rootfs.dde.ext4` 是为特定开发板优化过的，建议笔者再重新制作一个。
+
+### 所需环境
+
+需要一个 Ubuntu 的 riscv 环境，这是因为 Deepin 的部分软件包使用了 zst 压缩，而 Debian 的 dpkg 无法处理这种压缩方式。具体的环境搭建可参考笔者之前的文章[使用 QEMU 搭建 RISC-V 开发环境](https://blog.davidwang.org/2022/10/12/qemu-riscv-install/)和 [Ubuntu wiki](https://wiki.ubuntu.com/RISC-V)。
+
+安装依赖：`apt install mmdebstarp`
+
+### 下载及构建
+
+```shell
+wget https://mirror.iscas.ac.cn/deepin-riscv/deepin-stage1/deepin-beige-stage1-dde.tar
+mmdebstrap --include=dde,xserver-xorg,lightdm,usrmerge,ca-certificates beige deepin-beige-stage1-dde.tar "deb [trusted=yes] https://mirror.iscas.ac.cn/deepin-riscv/deepin-stage1/ beige main
+```
+
+第二条命令是 chroot 到 deepin 环境中并安装所需软件。整个过程所耗时较长，建议多分配些内核和内存给 QEMU。
+
+### 制作镜像
+
+这一步和之前的制作镜像过程大同小异，直接上命令：
+
+```shell
+mv deepin.raw deepin.raw.old
+qemu-img create -f raw deepin.raw 8G
+sudo losetup -P /dev/loop0 deepin.raw
+sudo fdisk /dev/loop0
+sudo mkfs.ext4 /dev/loop0p1
+sudo mount /dev/loop0p1 /mnt/deepin
+mkdir deepin && sudo tar -xvf deepin-beige-stage1-dde.tar -C ./deepin
+sudo cp -r ./deepin/* /mnt/deepin
+sudo umount /dev/loop0p1
+sudo losetup -D
+```
+
+在解压后，别忘了清除密码。这里的 `/etc/shadow` 里的 `root` 用户的密码字段为星号，说明密码登陆被禁用了，直接删掉星号即可。
+
+---
 
 笔者最近开始了 Deepin risc-v 的软件包修复工作，俗话说，“工欲善其事，必先利其器”。在开始工作前，有必要准备好趁手的开发环境，本文简述了如何基于 PLCT 实验室的 Tarsier 项目提供的环境构建 Deepin risc-v 的 qemu 镜像。
 
 ## 下载 `rootfs.dde.ext4`
 
-这是 Tarsier 项目的 deepin 小组提供的 rootfs，我们要基于此制作镜像。首先下载它：
+这是 Tarsier 项目的 deepin 小组提供的 rootfs，本文要基于此制作镜像。首先下载它：
 
 ```shell
 wget https://mirror.iscas.ac.cn/deepin-riscv/deepin-stage1/rootfs.dde.ext4
