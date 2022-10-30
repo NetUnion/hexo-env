@@ -10,7 +10,7 @@ date: 2022-10-27 22:06:47
 
 ## 10/30 更新
 
-不必要在 Ubuntu 下构建了，zst 的问题已经修复。新包：`https://mirror.iscas.ac.cn/deepin-riscv/deepin-stage1/deepin-beige-stage1-dde.tar.gz` 其他的步骤请参考下文。
+不必要在 Ubuntu 下构建了，zst 的问题已经修复。新包：`https://mirror.iscas.ac.cn/deepin-riscv/deepin-stage1/deepin-beige-stage1-dde.tar.gz` 其他的步骤请参考下文。(解压请使用：`mkdir deepin && sudo tar -zxvf deepin-beige-stage1-dde.tar -C ./deepin`)
 
 ## 10/29 更新
 
