@@ -8,6 +8,10 @@ description: 本文简述了如何构建 Deepin risc-v 的 qemu 镜像
 date: 2022-10-27 22:06:47
 ---
 
+## 10/30 更新
+
+不必要在 Ubuntu 下构建了，zst 的问题已经修复。新包：`https://mirror.iscas.ac.cn/deepin-riscv/deepin-stage1/deepin-beige-stage1-dde.tar.gz` 其他的步骤请参考下文。
+
 ## 10/29 更新
 
 被组长告知之前直接使用的 `rootfs.dde.ext4` 是为特定开发板优化过的，建议笔者再重新制作一个。
