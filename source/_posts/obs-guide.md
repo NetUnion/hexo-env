@@ -1,9 +1,11 @@
 ---
 title: OBS 简易使用指南
 tags:
-    - PLCT
+  - PLCT
 description: 本文简述了 OBS 自动构建系统的使用方法（以 WebUI 为主）
+date: 2022-11-29 16:32:59
 ---
+
 
 ## 什么是 OBS
 
@@ -46,4 +48,3 @@ OBS 的使用和 Git 很是类似，在注册账号后，每个人会有一个 h
 {% asset_img 5b4190b4e891eb1fa4acf34036852d5aca595a9a9a439475d6a2f34dc7919efb.png 上传源码 %}
 
 当然，对于 Deepin 的 RISC-V 发行版来说，用户通常可以在 Deepin 的官方仓库找到对应的源码包，而对于其他发行版或者新软件包而言，就需要用户自行创建符合 Debian 或特定发行版规范的源码包和描述文件了。
-
