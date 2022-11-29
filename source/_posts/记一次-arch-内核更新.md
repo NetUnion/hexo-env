@@ -2,9 +2,8 @@
 title: 记一次 Arch 内核更新
 date: 2022-03-22 01:37:46
 tags: [Arch, Linux]
+description: 今天尝试着把 Arch 的内核改成了 mainline 版本，但是开机时卡住了，究其原因，是显卡驱动的问题。
 ---
-
-今天尝试着把 Arch 的内核改成了 mainline 版本，但是开机时卡住了，究其原因，是显卡驱动的问题。
 
 ## 切换到 Mainline 内核
 
