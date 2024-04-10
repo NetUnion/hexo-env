@@ -4,6 +4,7 @@ tags:
   - Verilog
   - EE
 date: 2024-04-10 22:09:15
+description: Verilog 基础语法
 ---
 
 
