@@ -1,5 +1,5 @@
 ---
-title: 01 - Verilog 基础语法
+title: Verilog 学习笔记 01 - Verilog 基础语法
 tags:
   - Verilog
   - EE
